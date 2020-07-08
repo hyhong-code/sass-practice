@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .showcase {
+    height: 40rem;
+
+    .logo {
+      font-size: 1.6rem;
+    }
+
+    &-content {
+      text-align: center;
+
+      img {
+        display: none;
+      }
+    }
+
+    nav {
+      ul {
+        li {
+          margin: auto 0.8rem;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

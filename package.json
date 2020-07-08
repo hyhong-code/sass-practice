@@ -1,0 +1,34 @@
+{
+  "name": "scss-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^9.8.4",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver sass",
+    "compile:sass": "node-sass scss/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.css",
+    "build:css": "npm-run-all compile:sass prefix:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyhong-code/sass-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyhong-code/sass-practice/issues"
+  },
+  "homepage": "https://github.com/hyhong-code/sass-practice#readme"
+}
